@@ -1,5 +1,5 @@
 {
-	"CN": "My Awesome CA",
+	"CN": "RaoCorp Certificate Authority",
 	"key": {
 		"algo": "rsa",
 		"size": 2048
@@ -7,8 +7,8 @@
 	"names": [
 		{
 			"C": "US",
-			"L": "CA",
-			"ST": "Amador County",
+			"L": "Pioneer",
+			"ST": "California",
 			"O": "Rao Corp",
 			"OU": "CA Services"
 		}

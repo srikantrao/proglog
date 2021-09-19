@@ -6,9 +6,17 @@ import (
 )
 
 var (
-	CAFile = ConfigFile("ca.pem")
-	ServerCertFile = ConfigFile("server.pem")
-	ServerKeyFile = ConfigFile("server-key.pem")
+	CAFile               = ConfigFile("ca.pem")
+	ServerCertFile       = ConfigFile("server.pem")
+	ServerKeyFile        = ConfigFile("server-key.pem")
+	RootClientCertFile   = ConfigFile("root-client.pem")
+	RootClientKeyFile    = ConfigFile("root-client-key.pem")
+	NobodyClientCertFile = ConfigFile("nobody-client.pem")
+	NobodyClientKeyFile  = ConfigFile("nobody-client-key.pem")
+	ClientCertFile       = ConfigFile("client.pem")
+	ClientKeyFile        = ConfigFile("client-key.pem")
+	ACLModelFile         = ConfigFile("model.conf")
+	ACLPolicyFile        = ConfigFile("policy.csv")
 )
 
 // Get the absolute path to the current filename

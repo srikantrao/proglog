@@ -3,6 +3,7 @@ module github.com/srikantrao/proglog
 go 1.15
 
 require (
+	github.com/casbin/casbin v1.9.1
 	github.com/cloudflare/cfssl v1.4.1 // indirect
 	github.com/gorilla/mux v1.8.0
 	github.com/stretchr/testify v1.7.0

@@ -3,6 +3,7 @@ package server
 import (
 	"context"
 	api "github.com/srikantrao/proglog/api/v1"
+	"github.com/srikantrao/proglog/internal/auth"
 	"google.golang.org/grpc"
 )
 
@@ -12,7 +13,8 @@ type CommitLog interface {
 }
 
 type Config struct {
-	CommitLog CommitLog
+	CommitLog  CommitLog
+	Authorizer *auth.Authorizer
 }
 
 type grpcServer struct {
@@ -20,8 +22,8 @@ type grpcServer struct {
 	*Config
 }
 
-func NewGRPCServer(config *Config) (*grpc.Server, error) {
-	gsrv := grpc.NewServer()
+func NewGRPCServer(config *Config, opts ...grpc.ServerOption) (*grpc.Server, error) {
+	gsrv := grpc.NewServer(opts...)
 	srv, err := newgrpcServer(config)
 	if err != nil {
 		return nil, err
